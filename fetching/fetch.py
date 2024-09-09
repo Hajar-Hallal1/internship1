@@ -7,7 +7,7 @@ response = requests.get(url)
 if response.status_code == 200:
     data = response.json()
 
-with open('weather.csv', 'a') as weather-data:
+with open('weather.json', 'a') as weather-data:
     data1 = json.load(weather-data)
 normalized-data = pd.json-normalize(data1)
 df = pd.DataFrame(normalized-data)
