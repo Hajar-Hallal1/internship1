@@ -7,7 +7,7 @@ response = requests.get(url)
 if response.status_code == 200:
     data = response.json()
 
-data1 = json.load(data)
-normalized-data = pd.json-normalize(data1)
+
+normalized-data = pd.json-normalize(data)
 df = pd.DataFrame(normalized-data)
 print(df)
