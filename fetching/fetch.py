@@ -11,4 +11,4 @@ with open('weather.csv', 'a') as weather-data:
     data1 = json.load(weather-data)
 normalized-data = pd.json-normalize(data1)
 df = pd.DataFrame(normalized-data)
-df.head()
+print(df)
