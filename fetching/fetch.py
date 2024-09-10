@@ -6,9 +6,10 @@ url = "http://api.openweathermap.org/data/2.5/weather?&lat=33.3789&lon=35.4839&u
 response = requests.get(url)
 if response.status_code == 200:
     data = response.json()
-
-
-normalized-data = pd.json-normalize(data)
-df = pd.DataFrame(normalized-data)
-df.to-csv('weather.csv', index = 'false')
-print(df)
+    data1 = pd.json_normalize(data , "weather", "id", "name")
+    df = pd.DataFrame(data1)
+    data2 = pd.json_normalize(data["main"])
+    df1 = pd.DataFrame(data2)
+    df2 = pd.concat([df, df1], axis=1)
+    df2.to_csv('weather.csv', index = False, float_format="%.2f")
+    print(df2)
