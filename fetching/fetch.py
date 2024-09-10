@@ -10,4 +10,5 @@ if response.status_code == 200:
 
 normalized-data = pd.json-normalize(data)
 df = pd.DataFrame(normalized-data)
+df.to-csv('weather.csv', index = 'false')
 print(df)
